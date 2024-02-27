@@ -2,7 +2,7 @@
 
 ### Deploying and configuring of webserver and Deploying and configuring load balance
 
-### While implementing load balancer with Nginix, we deployed 2 back end servers, with a load balancer distribution traffic across the webservers.
+#### While implementing load balancer with Nginix, we deployed 2 back end servers, with a load balancer distribution traffic across the webservers.
 ### We connected the server by typing a code on the terminal with ssh.
 ### Every process that we did manually will be automated 
 ### Automation is the heart of the Devops.
