@@ -197,8 +197,7 @@ Run load balancer with server 1 and 2 public_ip code
 
 ### we will see below message.
 
-![alt text](<Image/Welcome to load balancer.png>)
-
+![alt text](<Image/Load balancer screen shot.png>)
 
 ### WE WILL SEE WELCOME TO EC2 1 && 2 AND INGINIX LOAD BALANCER.
 
