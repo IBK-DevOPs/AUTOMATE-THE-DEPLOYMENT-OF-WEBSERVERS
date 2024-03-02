@@ -37,16 +37,15 @@
 ### Open a file with below code.
    ### ` sudo vi install.sh`
 
-![alt text](<Image/sudo vi install.png>)
+### Enter the script and safe
 
  ### Open a file and paste the script below .
-### After inputting public ip click escape.
 
-![alt text](<Image/server 1 scrip.png>)
+### After insert a script click escape and save.
 
-![alt text](<Image/server 2 scrip.png>)
 
-### Press wq! To safe the script.
+
+![alt text](<Image/Configuration server of server 2.png>)
 
 ### Replace server 1  PUBLIC_IP with public IP (Public IP:13.58.17.91)
 
@@ -104,12 +103,20 @@ Run below code
 
    `![alt text](<Image/To change the permission chmod.png>) sudo chmod +x install.sh`
 
+   ![alt text](<Image/To change the permission chmod.png>)
+
 
 Run shell script by running below code
-  ` ./install.sh PUBLIC_IP`
+  ` ./install.sh 13.58.17.91`
+
+![alt text](<Image/configuration of server 1.png>)
+
+![alt text](<Image/Configuration server of server 2.png>)
+
 ### Repeat this step with server 2, run the script and save.
 
 ### DEPLOYMENT OF NGINIX AS LOAD BALANCER
+
 ### Create EC2 instance running Ubuntu 22.04.
 
 ![alt text](<Image/EC2 created.png>)
@@ -125,29 +132,30 @@ Run shell script by running below code
 ![alt text](<Image/connect nginix with shh.png>)
 
 
-### STEPS TO FOLLOW TO RUN A SCRIP AND CONFIGURING LOAD BALANCE NGINIX
+### STEPS TO FOLLOW TO RUN A SCRIPT AND CONFIGURING LOAD BALANCER NGINIX
+
 ### Create EC2 instance running Ubuntu 22.04.
+
 ### Create for server NGINIX server
+
 ### Add a rule to open port 80 and allow traffic from anywhere using security group.
-### Connect servers with a terminal using shh client.
+
+### Connect servers with a terminal using shh client server
+
 ### Open a file with below code.
 
    ` sudo vi install.sh`
 
-![alt text](<Image/Load balancer scrip with public IP.png>)
-
 ### Open a file and paste the script below .
-### Replace server 1  PUBLIC_IP with public IP (Public IP:13.58.17.91)
-### Replace server 2 PUBLIC_IP with public IP (Public IP:18.191.175.48)
-### Replace server LOAD BALANCE PUBLIC_IP with public IP                                           
-   ### (Public IP: 18.217.222.236)
+### Configure nginix with a script 
+#### Press i insert the script
+#### Press escape 
+#### :wq!
+#### Then enter
+          
+  
 
-![alt text](<Image/Nginix load balancer script A.png>)
-
-![alt text](<Image/Nginix load balancer script B.png>)
-
-### After inputting public ip click escape
-### Press type esc the shift + :wqa! To safe the script.
+### Safe the script.
 ### Change permission to make the script executable with below code
 `sudo chmod +x nginx.sh`
 
@@ -158,10 +166,26 @@ Run shell script by running below code
 ###  Run the script with below code
 `./nginx.sh PUBLIC_IP Webserver-1 Webserver-2`
 
+### Replce PUBLIC_IP WITH SERVER 1 IP 
 ### VERIFYING SERVER 1 SETUP
+
+./nginx.sh PUBLIC_IP Webserver-1 Webserver-2
+
+./nginx.sh 13.58.17.91 18.191.175.48
+
+Run load balancer with server 1 and 2 public_ip code
+
+![alt text](<Image/Server 1 server 2 and nginix  load balance Public_ IP.png>)
+
+
+### Put server 1 PUBLIC IP { 13.58.17.91} ON A URL
+### We will see below message
 
 ![alt text](<Image/welcome to  EC2 server 1.png>)
 
+### Put server 2 PUBLIC IP {18.191.175.48} ON A URL
+
+### We will see below message
 
 ### VERIFYING SERVER 2 SETUP
 
@@ -169,11 +193,14 @@ Run shell script by running below code
 
 ### VERIFYING LOAD BALANCER SETUP
 
+### Then input load balancer PUBLIC IP addres on url
+
+### we will see below message.
+
 ![alt text](<Image/Welcome to load balancer.png>)
 
-### INPUT PUBLIC IP OF A SERVER 1 &  2 AND LOAD
-### BALANCER  ON A URL
-### WE WILL SEE WELCOME TO EC2 AND INGINIX LOAD BALANCER.
+
+### WE WILL SEE WELCOME TO EC2 1 && 2 AND INGINIX LOAD BALANCER.
 
 
 
